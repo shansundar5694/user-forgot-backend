@@ -65,7 +65,7 @@ export const forgotPassword = async (req, res) => {
     });
     user.token = token;
     await user.save();
-    const reseturl = `http://localhost:5173/reset-password?token=${token}`;
+    const reseturl = `https://jovial-pithivier-e6d03b.netlify.app/reset-password?token=${token}`;
     const mailoptions = {
       from: process.env.EMAIL,
       to: user.email,
